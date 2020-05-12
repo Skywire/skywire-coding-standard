@@ -2,6 +2,20 @@
 
 Custom coding standard extending `magento/magento-coding-standard`
 
-## Installation
+## Installation to a project
 
 `composer require skywire/skywire-coding-standard`
+
+## Global Installation for PHPStorm
+
+### Install standard
+
+```
+git clone git@github.com:Skywire/skywire-coding-standard.git
+cd skywire-coding-standard
+composer install
+```
+
+### Configure PHPStorm
+
+Coming soon

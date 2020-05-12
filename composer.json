@@ -19,10 +19,10 @@
   "autoload": {
     "psr-4": {
       "Skywire\\": "Skywire/"
-    },
-    "scripts": {
-      "post-install-cmd": "vendor/bin/phpcs --config-set installed_paths ../../..",
-      "post-update-cmd": "vendor/bin/phpcs --config-set installed_paths ../../.."
     }
+  },
+  "scripts": {
+    "post-install-cmd": "vendor/bin/phpcs --config-set installed_paths ../../..,../../magento/magento-coding-standard,../../skywire/skywire-coding-standard",
+    "post-update-cmd": "vendor/bin/phpcs --config-set installed_paths ../../..,../../magento/magento-coding-standard,../../skywire/skywire-coding-standard"
   }
 }
