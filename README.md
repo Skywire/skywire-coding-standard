@@ -44,3 +44,9 @@ Find Quality tools -> PHPCodeSniffer_validation and check the checkbox to ensure
 Under options add `,xml,phtml`  to the file extensions to check and set the coding standard to `Skywire`
 
 ![](.README/standard_config.png)
+
+## Running from CLI
+
+To run against specific files or directories with the same configuration as PHPStorm use
+
+`~/skywire-coding-standard/vendor/bin/phpcs --extensions=php,js,css,inc,xml,phtml --standard=Skywire [path-to-files-to-sniff]`
