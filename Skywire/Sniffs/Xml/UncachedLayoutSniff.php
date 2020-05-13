@@ -1,7 +1,9 @@
 <?php
 /**
- * Copyright © Magento. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright © Skywire Ltd. All rights reserved.
+ *
+ * See LICENSE.txt for license details.
+ *
  */
 
 namespace Skywire\Sniffs\Xml;
@@ -21,8 +23,8 @@ class UncachedLayoutSniff implements Sniff
 
     public function process(File $phpcsFile, $stackPtr)
     {
-        $tokens = $phpcsFile->getTokens();
-        $token = $tokens[$stackPtr];
+        $tokens  = $phpcsFile->getTokens();
+        $token   = $tokens[$stackPtr];
         $noCache = strpos($token['content'], 'cacheable="false"') !== false;
         if ($noCache) {
             $phpcsFile->addWarning(

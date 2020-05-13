@@ -1,7 +1,9 @@
 <?php
 /**
- * Copyright © Magento. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright © Skywire Ltd. All rights reserved.
+ *
+ * See LICENSE.txt for license details.
+ *
  */
 
 namespace Skywire\Sniffs\CodeAnalysis;
@@ -23,7 +25,7 @@ class ObjectManagerSniff implements Sniff
     {
         return [
             T_VARIABLE,
-            T_STRING
+            T_STRING,
         ];
     }
 
@@ -36,7 +38,7 @@ class ObjectManagerSniff implements Sniff
     ) {
         // Factories are allows so skip if this class is one
         $file = basename($phpcsFile->path);
-        if(strpos($file, 'Factory') !== false || strpos($file, 'Test') !== false) {
+        if (strpos($file, 'Factory') !== false || strpos($file, 'Test') !== false) {
             return;
         }
 
@@ -46,7 +48,7 @@ class ObjectManagerSniff implements Sniff
             $phpcsFile->addError($this->message, $stackPtr, 'Skywire.CodeAnalysis.ObjectManager');
         }
 
-        if($token['type'] == 'T_STRING' && strpos($token['content'], 'ObjectManager') !== false) {
+        if ($token['type'] == 'T_STRING' && strpos($token['content'], 'ObjectManager') !== false) {
             $phpcsFile->addError($this->message, $stackPtr, 'Skywire.CodeAnalysis.ObjectManager');
         }
 
