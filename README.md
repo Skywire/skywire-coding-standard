@@ -11,6 +11,7 @@ Custom coding standard extending `magento/magento-coding-standard`
 ### Install standard
 
 ```
+cd ~/
 git clone git@github.com:Skywire/skywire-coding-standard.git
 cd skywire-coding-standard
 composer install
@@ -18,4 +19,28 @@ composer install
 
 ### Configure PHPStorm
 
-Coming soon
+#### Configure tool paths
+
+Open `Quality Tools settings`
+
+[File | Settings | Languages & Frameworks | PHP | Quality Tools](jetbrains://PhpStorm/settings?name=Languages+%26+Frameworks--PHP--Quality+Tools)
+
+Open `PHP_CodeSniffer` tab and click the `...` button next to the first dropdown
+
+![](.README/quality_tools.png)
+
+Configure your PhpCS and phpcbf binary paths to point to ~/skywire-coding-standard/vendor/bin
+
+![](.README/phpcs_bin_config.png)
+
+#### Configure inspections
+
+Open inspections settings
+
+[File | Settings | Editor | Inspections](jetbrains://PhpStorm/settings?name=Editor--Inspections)
+
+Find Quality tools -> PHPCodeSniffer_validation and check the checkbox to ensure it's enabled
+
+Under options add `,xml,phtml`  to the file extensions to check and set the coding standard to `Skywire`
+
+![](.README/standard_config.png)
