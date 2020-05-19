@@ -12,6 +12,14 @@
         <severity>10</severity>
         <type>error</type>
     </rule>
+
+    <!-- Check for Malformed XML -->
+    <rule ref="Skywire.Xml.Malformed">
+        <include-pattern>*.xml</include-pattern>
+        <severity>10</severity>
+        <type>error</type>
+    </rule>
+
     <!-- Check for object manager abuse -->
     <rule ref="Skywire.CodeAnalysis.ObjectManager">
         <severity>10</severity>
