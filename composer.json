@@ -20,7 +20,7 @@
     }
   },
   "scripts": {
-    "post-install-cmd": "vendor/bin/phpcs --config-set installed_paths ../../..,../../magento/magento-coding-standard,../../skywire/skywire-coding-standard",
-    "post-update-cmd": "vendor/bin/phpcs --config-set installed_paths ../../..,../../magento/magento-coding-standard,../../skywire/skywire-coding-standard"
+    "post-install-cmd": "vendor/bin/phpcs --config-set installed_paths ../../..,../../magento/magento-coding-standard,../../phpcompatibility/php-compatibility,../../skywire/skywire-coding-standard",
+    "post-update-cmd": "vendor/bin/phpcs --config-set installed_paths ../../..,../../magento/magento-coding-standard,../../phpcompatibility/php-compatibility,../../skywire/skywire-coding-standard"
   }
 }
