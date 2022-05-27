@@ -40,5 +40,7 @@
         <include-pattern>*.phtml</include-pattern>
     </rule>
 
-    <rule ref="Magento2" />
+    <rule ref="Magento2">
+        <exclude name="Magento2.Legacy.ObsoleteResponse.RedirectResponseMethodFound" />
+    </rule>
 </ruleset>
