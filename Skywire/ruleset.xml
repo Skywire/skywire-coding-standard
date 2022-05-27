@@ -42,5 +42,9 @@
 
     <rule ref="Magento2">
         <exclude name="Magento2.Legacy.ObsoleteResponse.RedirectResponseMethodFound" />
+        <exclude name="Magento2.Legacy.InstallUpgrade.ObsoleteUpgradeDataScript" />
+        <exclude name="Magento2.Legacy.InstallUpgrade.ObsoleteInstallDataScript" />
+        <exclude name="Magento2.Legacy.InstallUpgrade.ObsoleteInstallSchemaScript" />
+        <exclude name="Magento2.Legacy.InstallUpgrade.ObsoleteInstallDataScript" />
     </rule>
 </ruleset>
