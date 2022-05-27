@@ -47,4 +47,9 @@
         <exclude name="Magento2.Legacy.InstallUpgrade.ObsoleteInstallDataScript" />
         <exclude name="Magento2.Legacy.InstallUpgrade.ObsoleteUpgradeDataScript" />
     </rule>
+
+    <rule ref="Magento2.Html.HtmlSelfClosingTags.HtmlSelfClosingNonVoidTag">
+        <severity>7</severity>
+        <type>warning</type>
+    </rule>
 </ruleset>
